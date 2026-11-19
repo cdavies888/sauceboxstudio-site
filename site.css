@@ -1,11 +1,11 @@
 /* Saucebox site styles: the app's colour tokens (spec §1.1) and type (§5.1).
    Plain CSS, no framework, no third-party calls. */
 
-/* Nunito Bold (SIL Open Font Licence), self-hosted. Only used for the
+/* Nunito Bold (SIL Open Font Licence), self-hosted. Subset to the letters of "saucebox"; only used for the
    wordmark where SF Pro Rounded (ui-rounded) is not available. */
 @font-face {
   font-family: "Nunito";
-  src: url("/fonts/nunito-bold.woff2") format("woff2");
+  src: url("/fonts/nunito-bold-wordmark.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
