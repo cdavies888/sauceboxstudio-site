@@ -5,25 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Saucebox</title>
 <meta name="description" content="Saucebox is a songwriting sketchpad for iPhone. Now in beta.">
-<link rel="icon" href="icon-192.png">
+<meta name="theme-color" content="#F7F7F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/icon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="stylesheet" href="/site.css">
 <style>
-  :root { --surface:#F3EEE6; --ink:#1B1714; --meta:#6B625A; --chili:#D7371D; }
-  @media (prefers-color-scheme: dark) { :root { --surface:#1B1714; --ink:#F3EEE6; --meta:#A89E94; --chili:#E8573D; } }
-  body { margin:0; min-height:100vh; display:grid; place-items:center; background:var(--surface); color:var(--ink);
-         font:17px/1.5 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; text-align:center; }
-  main { padding:40px 20px; max-width:440px; }
-  img { width:96px; height:96px; border-radius:22px; }
-  h1 { font-size:34px; letter-spacing:-0.02em; margin:20px 0 6px; }
-  p { color:var(--meta); margin:0 0 24px; }
-  nav a { color:var(--chili); margin:0 10px; }
+  body { min-height: 100vh; min-height: 100svh; display: grid; place-items: center; text-align: center; }
+  main { padding: 40px 16px; max-width: 440px; }
+  .icon { display: block; width: 96px; height: 96px; margin: 0 auto 22px; }
+  h1 { margin: 0; }
+  .lockup { font-size: 34px; }
+  .tagline { margin: 12px 0 28px; color: var(--meta); font-size: 19px; }
+  footer { margin-top: 36px; }
 </style>
 </head>
 <body>
 <main>
-  <img src="icon-192.png" alt="Saucebox app icon" width="96" height="96">
-  <h1>Saucebox</h1>
-  <p>A songwriting sketchpad for iPhone. Now in private beta.</p>
-  <nav><a href="mailto:info@sauceboxstudio.com">Contact</a><a href="privacy.html">Privacy</a></nav>
+  <img class="icon" src="/icon.png" alt="Saucebox app icon" width="96" height="96">
+
+  <h1>
+    <span class="lockup" aria-label="saucebox">
+      <svg viewBox="3 3 34 34" aria-hidden="true" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path class="mark-handle" d="M12 14 Q20 2 28 14" stroke-width="1.6"/>
+        <path class="mark-carton" d="M7 14 H33 L29 36 H11 Z" stroke-width="1.8"/>
+        <path class="mark-zigzag" d="M7 14 L14 20 L20 14 L26 20 L33 14" stroke-width="1.4"/>
+        <circle class="mark-dot" cx="20" cy="27" r="3.2"/>
+      </svg>
+      <span class="wordmark">saucebox</span>
+    </span>
+  </h1>
+
+  <p class="tagline">A songwriting sketchpad for iPhone.</p>
+
+  <a class="button" href="/beta/">Join the beta</a>
+
+  <footer>
+    <nav class="footer-links">
+      <a href="mailto:info@sauceboxstudio.com">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+  </footer>
 </main>
 </body>
 </html>

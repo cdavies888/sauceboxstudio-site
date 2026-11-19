@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saucebox beta</title>
+<meta name="description" content="Join the Saucebox beta on TestFlight: a songwriting sketchpad for iPhone.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F7F7F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/icon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="stylesheet" href="/site.css">
+<style>
+  main { max-width: 720px; margin: 0 auto; padding: 20px 16px 48px; }
+  header { padding: 4px 0 28px; }
+
+  h1 { font-size: 34px; line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 12px; }
+  .subline { margin: 0 0 24px; color: var(--meta); font-size: 19px; line-height: 1.45; max-width: 34em; }
+  .join { margin: 0 0 40px; }
+
+  h2 { font-size: 21px; letter-spacing: -0.01em; margin: 0 0 14px; }
+  section { margin: 0 0 40px; }
+
+  .steps { list-style: none; counter-reset: step; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .steps li {
+    counter-increment: step;
+    display: flex; align-items: center; gap: 14px;
+    background: var(--card); border-radius: 12px; padding: 14px 16px;
+  }
+  .steps li::before {
+    content: counter(step);
+    flex: none; width: 30px; height: 30px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--tile); color: var(--ink);
+    font-weight: 600; font-size: 15px; font-variant-numeric: tabular-nums;
+  }
+
+  /* Three screens side by side; a sideways scroll on phones. */
+  .screens {
+    display: grid; grid-auto-flow: column; grid-auto-columns: minmax(200px, 1fr);
+    gap: 14px; margin: 0 -16px; padding: 0 16px 6px;
+    overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px;
+    list-style: none;
+  }
+  .screens li { scroll-snap-align: start; margin: 0; }
+  .screens figure { margin: 0; }
+  .screens img {
+    display: block; width: 100%; height: auto; aspect-ratio: 1320 / 2868;
+    border-radius: 22px; background: var(--tile);
+    outline: 1px solid var(--rule); outline-offset: -1px;
+  }
+  .screens figcaption { margin-top: 8px; text-align: center; color: var(--meta); font-size: 15px; }
+
+  .feedback p { margin: 0 0 10px; }
+
+  footer { border-top: 1px solid var(--rule); padding-top: 20px; }
+  footer .footer-links { justify-content: flex-start; }
+
+  @media (max-width: 599px) {
+    h1 { font-size: 30px; }
+    .subline { font-size: 17px; }
+    .join .button { display: block; width: 100%; }
+  }
+  @media (min-width: 600px) {
+    main { padding-top: 40px; }
+    header { padding-bottom: 44px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <a class="lockup" href="/" aria-label="saucebox, beta, home">
+      <svg viewBox="3 3 34 34" aria-hidden="true" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path class="mark-handle" d="M12 14 Q20 2 28 14" stroke-width="1.6"/>
+        <path class="mark-carton" d="M7 14 H33 L29 36 H11 Z" stroke-width="1.8"/>
+        <path class="mark-zigzag" d="M7 14 L14 20 L20 14 L26 20 L33 14" stroke-width="1.4"/>
+        <circle class="mark-dot" cx="20" cy="27" r="3.2"/>
+      </svg>
+      <span class="wordmark">saucebox</span>
+      <span class="beta">BETA</span>
+    </a>
+  </header>
+
+  <h1>Catch the idea before it’s gone.</h1>
+  <p class="subline">Start a take with one tap, keep the best ones and shape them into a song. All on your iPhone.</p>
+
+  <p class="join">
+    <a class="button" href="https://testflight.apple.com/join/KSEFqZ4C" rel="noreferrer">Join on TestFlight</a>
+  </p>
+
+  <section aria-labelledby="steps-title">
+    <h2 id="steps-title">Three steps</h2>
+    <ol class="steps">
+      <li>Install TestFlight from the App Store</li>
+      <li>Tap Join on TestFlight</li>
+      <li>Open Saucebox and tap the red record button</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="screens-title">
+    <h2 id="screens-title">A look inside</h2>
+    <ul class="screens">
+      <li>
+        <figure>
+          <picture>
+            <source srcset="screens/library-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="screens/library-light.webp" width="1320" height="2868" loading="lazy"
+                 alt="The Library: songs listed under Recent, with the round red record button at the bottom">
+          </picture>
+          <figcaption>Library</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <picture>
+            <source srcset="screens/recording-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="screens/recording-light.webp" width="1320" height="2868" loading="lazy"
+                 alt="Recording: a take's waveform drawing in as it records, with the running time">
+          </picture>
+          <figcaption>Recording</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <picture>
+            <source srcset="screens/takebin-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="screens/takebin-light.webp" width="1320" height="2868" loading="lazy"
+                 alt="The Take Bin: a song's takes, each with its waveform and a play button">
+          </picture>
+          <figcaption>Take Bin</figcaption>
+        </figure>
+      </li>
+    </ul>
+  </section>
+
+  <section class="feedback" aria-labelledby="feedback-title">
+    <h2 id="feedback-title">Feedback</h2>
+    <p>Tell us where you got stuck, and anything that got in your way.</p>
+    <p class="meta">Take a screenshot in the app to send feedback through TestFlight, or email <a href="mailto:feedback@sauceboxstudio.com">feedback@sauceboxstudio.com</a> for anything longer.</p>
+  </section>
+
+  <footer>
+    <nav class="footer-links">
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
