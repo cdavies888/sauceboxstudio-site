@@ -32,6 +32,21 @@
   dd { margin: 2px 0 0; color: var(--ink); }
   .meta { color: var(--meta); }
   kbd { font: inherit; font-weight: 600; }
+  .screens {
+    display: grid; grid-auto-flow: column; grid-auto-columns: minmax(180px, 1fr);
+    gap: 14px; margin: 0 -16px 20px; padding: 0 16px 6px;
+    overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px;
+    list-style: none;
+  }
+  .screens li { scroll-snap-align: start; margin: 0; max-width: none; }
+  .screens figure { margin: 0; }
+  .screens img {
+    display: block; width: 100%; height: auto; aspect-ratio: 1320 / 2868;
+    border-radius: 22px; background: var(--tile);
+    outline: 1px solid var(--rule); outline-offset: -1px;
+  }
+  .screens figcaption { margin-top: 8px; color: var(--meta); font-size: 15px; line-height: 1.4; }
+  .screens figcaption strong { color: var(--ink); display: block; }
   footer { border-top: 1px solid var(--rule); padding-top: 20px; }
   footer .footer-links { justify-content: flex-start; gap: 20px; }
   @media (max-width: 599px) { h1 { font-size: 30px; } .subline { font-size: 17px; } }
@@ -82,6 +97,49 @@
 
   <section id="map" aria-labelledby="map-title">
     <h2 id="map-title">How the app is laid out</h2>
+    <p class="meta">Swipe sideways to see each screen.</p>
+    <ul class="screens">
+      <li><figure>
+        <picture>
+          <source srcset="screens/library-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="screens/library-light.webp" width="660" height="1434" loading="lazy"
+               alt="The Recent screen: songs listed by date, with the round red record button at the bottom">
+        </picture>
+        <figcaption><strong>1. Recent</strong>Your songs. The red button records a new idea.</figcaption>
+      </figure></li>
+      <li><figure>
+        <picture>
+          <source srcset="screens/recording-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="screens/recording-light.webp" width="660" height="1434" loading="lazy"
+               alt="The record screen: a take's waveform drawing in as it records, with the running time">
+        </picture>
+        <figcaption><strong>2. Recording</strong>Sing, then stop and keep the take.</figcaption>
+      </figure></li>
+      <li><figure>
+        <picture>
+          <source srcset="screens/takebin-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="screens/takebin-light.webp" width="660" height="1434" loading="lazy"
+               alt="The Take Bin tab: a song's takes, each with its waveform and a play button">
+        </picture>
+        <figcaption><strong>3. Take Bin</strong>New takes wait here. Hold one for more options.</figcaption>
+      </figure></li>
+      <li><figure>
+        <picture>
+          <source srcset="screens/comp-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="screens/comp-light.webp" width="660" height="1434" loading="lazy"
+               alt="The Comp tab: Add section at the top, then Intro, Verse and Chorus sections with their takes, and a large play button">
+        </picture>
+        <figcaption><strong>4. Comp</strong>Sections in order. Drag takes in, then play the whole song.</figcaption>
+      </figure></li>
+      <li><figure>
+        <picture>
+          <source srcset="screens/lyricpad-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="screens/lyricpad-light.webp" width="660" height="1434" loading="lazy"
+               alt="The Lyric Pad tab: each section's takes with the words Saucebox heard and a syllable count per line">
+        </picture>
+        <figcaption><strong>5. Lyric Pad</strong>The words it heard, with syllables per line.</figcaption>
+      </figure></li>
+    </ul>
     <dl>
       <dt>Recent</dt>
       <dd>Your songs list. The red button records a new idea straight away. <kbd>+</kbd> makes an empty song. Swipe a song for Favourite, Lock and Delete. Hold it to edit its settings.</dd>
