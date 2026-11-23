@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saucebox beta guide</title>
+<meta name="description" content="How to use the Saucebox beta, and what we'd like you to try.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F7F7F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/icon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="stylesheet" href="/site.css">
+<style>
+  main { max-width: 720px; margin: 0 auto; padding: 20px 16px 48px; }
+  header { padding: 4px 0 28px; }
+  h1 { font-size: 34px; line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 12px; }
+  .subline { margin: 0 0 28px; color: var(--meta); font-size: 19px; line-height: 1.45; max-width: 34em; }
+  h2 { font-size: 21px; letter-spacing: -0.01em; margin: 0 0 12px; }
+  h3 { font-size: 17px; margin: 18px 0 6px; }
+  section { margin: 0 0 40px; }
+  p, li { max-width: 38em; }
+  ul, ol { padding-left: 1.3em; margin: 0 0 12px; }
+  li { margin: 0 0 6px; }
+  .toc { background: var(--card); border-radius: 12px; padding: 14px 16px; margin: 0 0 40px; }
+  .toc ol { margin: 0; }
+  .card { background: var(--card); border-radius: 12px; padding: 14px 16px; margin: 0 0 12px; }
+  .card h3 { margin-top: 0; }
+  .card p:last-child, .card ol:last-child, .card ul:last-child { margin-bottom: 0; }
+  dl { margin: 0; }
+  dt { font-weight: 600; margin-top: 12px; }
+  dd { margin: 2px 0 0; color: var(--ink); }
+  .meta { color: var(--meta); }
+  kbd { font: inherit; font-weight: 600; }
+  footer { border-top: 1px solid var(--rule); padding-top: 20px; }
+  footer .footer-links { justify-content: flex-start; gap: 20px; }
+  @media (max-width: 599px) { h1 { font-size: 30px; } .subline { font-size: 17px; } }
+  @media (min-width: 600px) { main { padding-top: 40px; } header { padding-bottom: 44px; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <a class="lockup" href="/beta/" aria-label="saucebox, beta, home">
+      <svg viewBox="3 3 34 34" aria-hidden="true" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path class="mark-handle" d="M12 14 Q20 2 28 14" stroke-width="1.6"/>
+        <path class="mark-carton" d="M7 14 H33 L29 36 H11 Z" stroke-width="1.8"/>
+        <path class="mark-zigzag" d="M7 14 L14 20 L20 14 L26 20 L33 14" stroke-width="1.4"/>
+        <circle class="mark-dot" cx="20" cy="27" r="3.2"/>
+      </svg>
+      <span class="wordmark">saucebox</span>
+      <span class="beta">BETA</span>
+    </a>
+  </header>
+
+  <h1>Beta guide</h1>
+  <p class="subline">Saucebox is a sketchpad for songs. You record ideas as takes, keep the good ones, arrange them into sections, and send the result to whoever is producing the track. This page shows you how, and what we'd like you to try.</p>
+
+  <nav class="toc" aria-label="On this page">
+    <ol>
+      <li><a href="#first-launch">Your first five minutes</a></li>
+      <li><a href="#map">How the app is laid out</a></li>
+      <li><a href="#test">What we'd like you to test</a></li>
+      <li><a href="#tips">Hidden controls</a></li>
+      <li><a href="#known">Known issues</a></li>
+      <li><a href="#feedback">Sending feedback</a></li>
+    </ol>
+  </nav>
+
+  <section id="first-launch" aria-labelledby="first-launch-title">
+    <h2 id="first-launch-title">Your first five minutes</h2>
+    <ol>
+      <li><strong>Allow the microphone</strong> when iOS asks. Saucebox can't record without it.</li>
+      <li><strong>If a card asks you to choose Standard mic, do it.</strong> Voice Isolation is designed for phone calls. It cuts the quiet parts out of singing. Tap <kbd>Choose Standard Mic</kbd>, pick <kbd>Standard</kbd>, then <kbd>Continue</kbd>.</li>
+      <li><strong>Tap the round red record button</strong> on the Recent screen. Sing or hum anything for 10 seconds.</li>
+      <li><strong>Tap stop and keep it</strong> (<kbd>Send to Take Bin</kbd>). That creates a new song with your take in it.</li>
+      <li><strong>Record two or three more takes</strong> in the same song using the Record button on the Take Bin tab.</li>
+      <li><strong>Open the Comp tab</strong>, tap <kbd>Add section</kbd> (a Verse, say), then drag a take from the Take Bin into it.</li>
+      <li><strong>Press play on the Comp tab.</strong> You'll hear your sections in order. That's the core loop.</li>
+    </ol>
+  </section>
+
+  <section id="map" aria-labelledby="map-title">
+    <h2 id="map-title">How the app is laid out</h2>
+    <dl>
+      <dt>Recent</dt>
+      <dd>Your songs list. The red button records a new idea straight away. <kbd>+</kbd> makes an empty song. Swipe a song for Favourite, Lock and Delete. Hold it to edit its settings.</dd>
+      <dt>Inside a song: four tabs along the bottom</dt>
+      <dd>
+        <ul>
+          <li><strong>Take Bin</strong> lists every take that isn't in the arrangement yet. Play, rename, trim, re-record.</li>
+          <li><strong>Comp</strong> is the arrangement. Add sections, drag takes into them, reorder, and play the whole thing.</li>
+          <li><strong>Lyric Pad</strong> shows the words for each take, grouped by section. Saucebox writes down what it hears, and you can edit it.</li>
+          <li><strong>Share</strong> lets you add tags and session notes, then send the song (audio plus arrangement) as one package.</li>
+        </ul>
+      </dd>
+      <dt>Top of a song</dt>
+      <dd>Song settings (key, tempo, guide track), and the Tuner.</dd>
+      <dt>The record screen</dt>
+      <dd>Count-in and click follow the song's tempo. <kbd>Retake</kbd> throws an attempt away and starts again. <kbd>✕</kbd> cancels. An orange pill means Voice Isolation is on; tap it to switch.</dd>
+    </dl>
+  </section>
+
+  <section id="test" aria-labelledby="test-title">
+    <h2 id="test-title">What we'd like you to test</h2>
+    <p>Try these in any order. Each one should take a couple of minutes. If anything confuses you, that counts as a finding, so please tell us.</p>
+
+    <div class="card">
+      <h3>1. Catch an idea fast</h3>
+      <p>From the Recent screen, how quickly can you get a hook recorded and saved? Anything that slows you down counts.</p>
+    </div>
+    <div class="card">
+      <h3>2. Build a rough song</h3>
+      <p>Make a song with at least two sections (Verse, Chorus) and two takes in each. Reorder them. Play the Comp from the top.</p>
+    </div>
+    <div class="card">
+      <h3>3. Fix a bad take</h3>
+      <p>Hold a take's name and choose <kbd>Re-record</kbd>. Sing it again and tap <kbd>Replace</kbd>. The new take should stay in the same place. Then open a take's trim page and drag the handles to shorten what plays.</p>
+    </div>
+    <div class="card">
+      <h3>4. Swap a take in the arrangement</h3>
+      <p>In the Comp tab, hold a Take Bin take and choose <kbd>Put in arrangement…</kbd> to replace one that's already in a section. Try <kbd>Undo</kbd>.</p>
+    </div>
+    <div class="card">
+      <h3>5. Words and pitch</h3>
+      <p>Check the Lyric Pad. Did it catch your words? Open the Tuner and sing a note.</p>
+    </div>
+    <div class="card">
+      <h3>6. Send it</h3>
+      <p>On the Share tab, add a note and tap <kbd>Share song</kbd>. Send it to yourself and check what arrives.</p>
+    </div>
+  </section>
+
+  <section id="tips" aria-labelledby="tips-title">
+    <h2 id="tips-title">Hidden controls</h2>
+    <ul>
+      <li><strong>Hold</strong> a take's name for Rename, Re-record, Put in arrangement, Return to Take Bin and Delete.</li>
+      <li><strong>Swipe</strong> a song on the Recent screen for Favourite, Lock and Delete.</li>
+      <li><strong>Lock</strong> protects a song or take from edits. Locked items are greyed out and their menus hide editing actions.</li>
+      <li>The <kbd>⋯</kbd> next to a section name moves it, renames it, or adds and removes bars.</li>
+      <li>In the Tuner, <strong>hold</strong> the pitch to hear the reference note.</li>
+    </ul>
+  </section>
+
+  <section id="known" aria-labelledby="known-title">
+    <h2 id="known-title">Known issues</h2>
+    <ul>
+      <li>If you turned the microphone off for Saucebox, the record button won't tell you why yet. Turn it back on in <strong>Settings › Saucebox</strong>.</li>
+      <li>A take whose audio file is missing doesn't show a clear "missing" state yet.</li>
+      <li>Your songs live only on this iPhone. There's no iCloud sync or backup yet, so don't keep anything here you can't lose.</li>
+    </ul>
+  </section>
+
+  <section id="feedback" aria-labelledby="feedback-title">
+    <h2 id="feedback-title">Sending feedback</h2>
+    <p><strong>Quickest:</strong> take a screenshot in Saucebox, then tap <kbd>Share Beta Feedback</kbd>. Say what you were trying to do and what happened.</p>
+    <p><strong>If it crashes:</strong> TestFlight will offer to send a report. Please send it, and say what you tapped just before the crash.</p>
+    <p class="meta">Anything longer: <a href="mailto:feedback@sauceboxstudio.com">feedback@sauceboxstudio.com</a></p>
+  </section>
+
+  <footer>
+    <nav class="footer-links">
+      <a href="/beta/">Beta home</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
